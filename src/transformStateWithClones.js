@@ -32,6 +32,11 @@ function transformStateWithClones(state, actions) {
         newState = {};
         break;
       }
+
+      default: {
+        newState = { ...curState };
+        break;
+      }
     }
 
     results.push(newState);
