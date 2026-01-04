@@ -34,8 +34,7 @@ function transformStateWithClones(state, actions) {
       }
 
       default: {
-        newState = { ...curState };
-        break;
+        throw new Error(`Unknow action type: ${action.type}`);
       }
     }
 
